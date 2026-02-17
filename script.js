@@ -95,28 +95,71 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Form Submission (Mock)
+    // Form Submission (Formspree Integration)
     const contactForm = document.querySelector('.contact-form');
     if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
+        contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             const btn = contactForm.querySelector('button');
             const originalText = btn.textContent;
+            
+            // Check if the user hasn't replaced the placeholder ID yet
+            if (contactForm.action.includes('TU_ID_DE_FORMSPREE')) {
+                alert('Para que el formulario funcione, necesitas registrarte en Formspree (https://formspree.io) y reemplazar "TU_ID_DE_FORMSPREE" en el archivo index.html con tu ID de formulario.');
+                return;
+            }
 
             btn.textContent = 'Enviando...';
             btn.disabled = true;
 
-            setTimeout(() => {
-                btn.textContent = '¡Mensaje Enviado!';
-                btn.style.backgroundColor = 'var(--accent-color)';
-                contactForm.reset();
+            try {
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: new FormData(contactForm),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    btn.textContent = '¡Mensaje Enviado!';
+                    btn.style.backgroundColor = 'var(--accent-color)';
+                    contactForm.reset();
+
+                    setTimeout(() => {
+                        btn.textContent = originalText;
+                        btn.disabled = false;
+                        btn.style.backgroundColor = '';
+                    }, 3000);
+                } else {
+                    const data = await response.json();
+                    if (data.errors) {
+                         throw new Error(data.errors.map(error => error.message).join(", "));
+                    } else {
+                        throw new Error('Hubo un problema al enviar el formulario');
+                    }
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                
+                // If fetch failed deeply (like CORS error on local file), try standard submission
+                // This is common when testing from file://
+                if (error.name === 'TypeError' && window.location.protocol === 'file:') {
+                     alert('Parece que estás probando desde un archivo local. El formulario se enviará de la forma tradicional.');
+                     contactForm.submit(); // Fallback to standard submit
+                     return;
+                }
+
+                btn.textContent = 'Error';
+                btn.style.backgroundColor = '#e74c3c';
+                alert('Hubo un error al enviar el mensaje. Detalles: ' + error.message);
 
                 setTimeout(() => {
                     btn.textContent = originalText;
                     btn.disabled = false;
                     btn.style.backgroundColor = '';
                 }, 3000);
-            }, 1500);
+            }
         });
     }
 });
