@@ -31,15 +31,23 @@
             </div>
 
             <ul class="nav-links">
-                <li><a href="#home">Inicio</a></li>
-                <li><a href="#about">Perfil</a></li>
-                <li><a href="#experience">Experiencia</a></li>
-                <li><a href="#certifications">Formación</a></li>
-                <li><a href="#projects">Proyectos</a></li>
-                <li><a href="#contact">Contacto</a></li>
+                <li><a href="#home"><span class="lang-es">Inicio</span><span class="lang-en">Home</span></a></li>
+                <li><a href="#about"><span class="lang-es">Perfil</span><span class="lang-en">Profile</span></a></li>
+                <li><a href="#projects"><span class="lang-es">Proyectos</span><span class="lang-en">Projects</span></a>
+                </li>
+                <li><a href="#experience"><span class="lang-es">Experiencia</span><span
+                            class="lang-en">Experience</span></a></li>
+                <li><a href="#certifications"><span class="lang-es">Formación</span><span
+                            class="lang-en">Education</span></a></li>
+                <li><a href="#contact"><span class="lang-es">Contacto</span><span class="lang-en">Contact</span></a>
+                </li>
             </ul>
 
             <div class="nav-actions">
+                <div class="lang-switch">
+                    <button class="lang-btn active" data-lang="es">ES</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
                 <button id="theme-toggle" aria-label="Cambiar modo de color">
                     <i class="fas fa-moon"></i>
                 </button>
@@ -52,12 +60,12 @@
         </nav>
         <!-- Mobile Menu Overlay -->
         <div class="mobile-menu">
-            <a href="#home">Inicio</a>
-            <a href="#about">Perfil</a>
-            <a href="#experience">Experiencia</a>
-            <a href="#certifications">Formación</a>
-            <a href="#projects">Proyectos</a>
-            <a href="#contact">Contacto</a>
+            <a href="#home"><span class="lang-es">Inicio</span><span class="lang-en">Home</span></a>
+            <a href="#about"><span class="lang-es">Perfil</span><span class="lang-en">Profile</span></a>
+            <a href="#projects"><span class="lang-es">Proyectos</span><span class="lang-en">Projects</span></a>
+            <a href="#experience"><span class="lang-es">Experiencia</span><span class="lang-en">Experience</span></a>
+            <a href="#certifications"><span class="lang-es">Formación</span><span class="lang-en">Education</span></a>
+            <a href="#contact"><span class="lang-es">Contacto</span><span class="lang-en">Contact</span></a>
         </div>
     </header>
 
@@ -66,18 +74,44 @@
         <section id="home" class="hero">
             <div class="container hero-container">
                 <div class="hero-content">
-                    <div class="badge-opener reveal">QA Engineer & Project Manager</div>
-                    <h1 class="reveal delay-100">Hola, soy <span>María Auxiliadora Vélez Mendoza</span></h1>
-                    <h2 class="reveal delay-200">QA Engineer | Manual & Automation Testing | Ingeniera en Sistemas</h2>
+                    <div class="badge-opener reveal">
+                        <span class="lang-es">Ingeniera en Sistemas & QA Engineer</span>
+                        <span class="lang-en">Systems Engineer & QA Engineer</span>
+                    </div>
+                    <h1 class="reveal delay-100">
+                        <span class="lang-es">Hola, soy <span>María Auxiliadora Vélez Mendoza</span></span>
+                        <span class="lang-en">Hello, I am <span>María Auxiliadora Vélez Mendoza</span></span>
+                    </h1>
+                    <h2 class="reveal delay-200">
+                        <span class="lang-es">QA Engineer Full-Stack | Automation & Manual Testing | Ingeniera en
+                            Sistemas</span>
+                        <span class="lang-en">Full-Stack QA Engineer | Automation & Manual Testing | Systems
+                            Engineer</span>
+                    </h2>
                     <p class="reveal delay-300">
-                        Ingeniera en Sistemas con más de 3 años de experiencia garantizando la calidad de software y el 
-                        análisis funcional en sistemas críticos de alta transaccionalidad. Especialista en diseño y ejecución 
-                        de estrategias de Testing Funcional, End-to-End (E2E), Regression, Smoke, Sanity y pruebas de 
-                        aceptación (UAT).
+                        <span class="lang-es">Ingeniera en Sistemas con más de 3 años de experiencia garantizando la
+                            calidad de software y el análisis funcional en sistemas críticos de alta transaccionalidad.
+                            Especialista en diseño y ejecución de estrategias de Testing Funcional, End-to-End (E2E),
+                            Regression, Smoke, Sanity y pruebas de aceptación (UAT). Orientada a la resolución de
+                            problemas, mitigación de riesgos y documentación precisa de defectos.</span>
+                        <span class="lang-en">Systems Engineer with over 3 years of experience ensuring software quality
+                            and functional analysis in critical high-transaction systems. Specialist in designing and
+                            executing Functional, End-to-End (E2E), Regression, Smoke, Sanity, and User Acceptance
+                            Testing (UAT) strategies. Solution-oriented, focused on risk mitigation, and precise defect
+                            documentation.</span>
                     </p>
                     <div class="hero-btns reveal delay-400">
-                        <a href="#projects" class="btn btn-primary">Ver Proyectos <i class="fas fa-arrow-right"></i></a>
-                        <a href="Maria_Velez_QA_Engineer.pdf" target="_blank" class="btn btn-outline">Descargar CV <i class="fas fa-download"></i></a>
+                        <a href="#projects" class="btn btn-primary">
+                            <span class="lang-es">Ver Proyectos <i class="fas fa-arrow-right"></i></span>
+                            <span class="lang-en">View Projects <i class="fas fa-arrow-right"></i></span>
+                        </a>
+                        <a href="docs/CV_Maria_Velez_QA.pdf" target="_blank" class="btn btn-outline lang-es">
+                            Descargar CV <i class="fas fa-download"></i>
+                        </a>
+                        <a href="docs/Maria_Velez_QA_Engineer_Ingles.pdf" target="_blank"
+                            class="btn btn-outline lang-en">
+                            Download CV <i class="fas fa-download"></i>
+                        </a>
                     </div>
 
                     <div class="social-hero reveal delay-500">
@@ -90,12 +124,14 @@
                 </div>
                 <div class="hero-image reveal delay-300">
                     <div class="image-wrapper">
-                        <!-- Placeholder avatar icon as requested if no image -->
                         <img src="imagen.jpg" alt="María Auxiliadora Vélez Mendoza">
                     </div>
                     <div class="exp-badge floating-badge">
                         <i class="fas fa-check-circle"></i>
-                        <span>QA Certified</span>
+                        <span>
+                            <span class="lang-es">QA Certificada</span>
+                            <span class="lang-en">QA Certified</span>
+                        </span>
                     </div>
                 </div>
             </div>
@@ -104,40 +140,55 @@
         <!-- Technical Stack Section -->
         <section id="stack" class="stack-section">
             <div class="container">
-                <div class="stack-wrapper reveal">
-                    <h3>Tech Stack & Herramientas</h3>
-                    <div class="stack-icons">
-                        <div class="stack-item" title="Selenium WebDriver">
-                            <i class="fas fa-robot"></i>
-                            <span>Selenium</span>
+                <div class="section-title">
+                    <h2 class="reveal">
+                        <span class="lang-es">Tech Stack & Herramientas</span>
+                        <span class="lang-en">Tech Stack & Tools</span>
+                    </h2>
+                    <div class="underline"></div>
+                </div>
+                <div class="stack-grid reveal">
+                    <!-- Category 1: Automation & Backend -->
+                    <div class="stack-category">
+                        <h3>
+                            <i class="fas fa-cogs"></i>
+                            <span class="lang-es">Automatización & Backend</span>
+                            <span class="lang-en">Automation & Backend</span>
+                        </h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag" title="Python"><i class="fab fa-python" style="color: #3776ab;"></i>
+                                Python</span>
+                            <span class="tech-tag" title="Selenium WebDriver"><i class="fas fa-robot"
+                                    style="color: #43b02a;"></i> Selenium WebDriver</span>
+                            <span class="tech-tag" title="Pytest"><i class="fas fa-flask" style="color: #0e83cd;"></i>
+                                Pytest</span>
+                            <span class="tech-tag" title="PostgreSQL"><i class="fas fa-database"
+                                    style="color: #336791;"></i> PostgreSQL</span>
+                            <span class="tech-tag" title="Consola Linux (Bash)"><i class="fas fa-terminal"
+                                    style="color: #4ebd3a;"></i> <span class="lang-es">Consola Linux (Bash)</span><span
+                                    class="lang-en">Linux Console (Bash)</span></span>
                         </div>
-                        <div class="stack-item" title="Postman API Testing">
-                            <i class="fas fa-rocket"></i>
-                            <span>Postman</span>
-                        </div>
-                        <div class="stack-item" title="JIRA Bug Tracking">
-                            <i class="fab fa-jira"></i>
-                            <span>JIRA</span>
-                        </div>
-                        <div class="stack-item" title="SQL (PostgreSQL)">
-                            <i class="fas fa-database"></i>
-                            <span>PostgreSQL</span>
-                        </div>
-                        <div class="stack-item" title="Azure DevOps (CI/CD)">
-                            <i class="fab fa-microsoft"></i>
-                            <span>Azure DevOps</span>
-                        </div>
-                        <div class="stack-item" title="Python Programming">
-                            <i class="fab fa-python"></i>
-                            <span>Python</span>
-                        </div>
-                        <div class="stack-item" title="Android Studio">
-                            <i class="fab fa-android"></i>
-                            <span>Android</span>
-                        </div>
-                        <div class="stack-item" title="Git Version Control">
-                            <i class="fab fa-git-alt"></i>
-                            <span>Git</span>
+                    </div>
+
+                    <!-- Category 2: Gestión & API -->
+                    <div class="stack-category">
+                        <h3>
+                            <i class="fas fa-project-diagram"></i>
+                            <span class="lang-es">Gestión & API</span>
+                            <span class="lang-en">Management & API</span>
+                        </h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag" title="Postman"><i class="fas fa-rocket" style="color: #ff6c37;"></i>
+                                Postman</span>
+                            <span class="tech-tag" title="Chrome DevTools"><i class="fab fa-chrome"
+                                    style="color: #4285f4;"></i> Chrome DevTools</span>
+                            <span class="tech-tag" title="Jira"><i class="fab fa-jira" style="color: #0052cc;"></i>
+                                Jira</span>
+                            <span class="tech-tag" title="Git/GitHub"><i class="fab fa-github"
+                                    style="color: #24292e;"></i> Git/GitHub</span>
+                            <span class="tech-tag" title="Metodologías Ágiles (Scrum)"><i class="fas fa-sync"
+                                    style="color: #f29111;"></i> <span class="lang-es">Metodologías Ágiles
+                                    (Scrum)</span><span class="lang-en">Agile Methodologies (Scrum)</span></span>
                         </div>
                     </div>
                 </div>
@@ -148,21 +199,759 @@
         <section id="about" class="competencies section-padding">
             <div class="container">
                 <div class="section-title">
-                    <h2 class="reveal">Competencias Clave</h2>
+                    <h2 class="reveal">
+                        <span class="lang-es">Competencias Clave</span>
+                        <span class="lang-en">Key Competencies</span>
+                    </h2>
                     <div class="underline"></div>
                 </div>
 
                 <div class="competencies-grid reveal">
-                    <span class="skill-tag">Diseño de casos de prueba</span>
-                    <span class="skill-tag">Pruebas funcionales y de regresión</span>
-                    <span class="skill-tag">Gestión de bugs (JIRA)</span>
-                    <span class="skill-tag">API Testing (Postman)</span>
-                    <span class="skill-tag">Automatización (Selenium)</span>
-                    <span class="skill-tag">Validación de datos (SQL)</span>
-                    <span class="skill-tag">Metodologías Ágiles (Scrum/Kanban)</span>
-                    <span class="skill-tag">Documentación técnica</span>
+                    <span class="skill-tag">
+                        <span class="lang-es">Diseño de casos de prueba</span>
+                        <span class="lang-en">Test Case Design</span>
+                    </span>
+                    <span class="skill-tag">
+                        <span class="lang-es">Pruebas funcionales y de regresión</span>
+                        <span class="lang-en">Functional & Regression Testing</span>
+                    </span>
+                    <span class="skill-tag">
+                        <span class="lang-es">Gestión de defectos (JIRA)</span>
+                        <span class="lang-en">Bug Tracking & Management (JIRA)</span>
+                    </span>
+                    <span class="skill-tag">
+                        <span class="lang-es">Pruebas de API (Postman)</span>
+                        <span class="lang-en">API Testing (Postman)</span>
+                    </span>
+                    <span class="skill-tag">
+                        <span class="lang-es">Automatización de Pruebas (Selenium)</span>
+                        <span class="lang-en">Test Automation (Selenium)</span>
+                    </span>
+                    <span class="skill-tag">
+                        <span class="lang-es">Validación de datos (SQL)</span>
+                        <span class="lang-en">Data Integrity Testing (SQL)</span>
+                    </span>
+                    <span class="skill-tag">
+                        <span class="lang-es">Metodologías Ágiles (Scrum/Kanban)</span>
+                        <span class="lang-en">Agile Methodologies (Scrum/Kanban)</span>
+                    </span>
+                    <span class="skill-tag">
+                        <span class="lang-es">Documentación técnica de defectos</span>
+                        <span class="lang-en">Technical Bug Documentation</span>
+                    </span>
                     <span class="skill-tag">Python</span>
                     <span class="skill-tag">Android Studio</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section (Moved before Experience Section) -->
+        <section id="projects" class="projects section-padding">
+            <div class="container">
+                <div class="section-title">
+                    <h2 class="reveal">
+                        <span class="lang-es">Portafolio de Ingeniería de Pruebas (QA Engineering)</span>
+                        <span class="lang-en">QA Engineering Portfolio</span>
+                    </h2>
+                    <div class="underline"></div>
+                </div>
+
+                <!-- Project Filters -->
+                <div class="project-filters reveal">
+                    <button class="filter-btn active" data-filter="all">
+                        <span class="lang-es">Todos</span><span class="lang-en">All</span>
+                    </button>
+                    <button class="filter-btn" data-filter="auditoria">
+                        <span class="lang-es">Auditoría Integral</span><span class="lang-en">Comprehensive Audit</span>
+                    </button>
+                    <button class="filter-btn" data-filter="automation">
+                        <span class="lang-es">Automatización</span><span class="lang-en">Test Automation</span>
+                    </button>
+                    <button class="filter-btn" data-filter="backend">
+                        <span class="lang-es">Backend & SQL</span><span class="lang-en">Backend & SQL</span>
+                    </button>
+                    <button class="filter-btn" data-filter="mobile">
+                        <span class="lang-es">Mobile Testing</span><span class="lang-en">Mobile Testing</span>
+                    </button>
+                    <button class="filter-btn" data-filter="manual">
+                        <span class="lang-es">Pruebas Manuales</span><span class="lang-en">Manual Testing</span>
+                    </button>
+                </div>
+
+                <!-- Projects Groups (Categorized) -->
+                <div class="projects-container">
+
+                    <!-- CATEGORÍA 1: Auditoría Integral (Full-Stack QA) -->
+                    <div class="project-category-group" data-category="auditoria">
+                        <div class="category-header">
+                            <h3>👑
+                                <span class="lang-es">Categoría 1: Auditoría Integral (Full-Stack QA)</span>
+                                <span class="lang-en">Category 1: Comprehensive Audit (Full-Stack QA)</span>
+                            </h3>
+                            <div class="category-divider"></div>
+                        </div>
+                        <div class="projects-grid">
+                            <!-- Tarjeta 1 -->
+                            <div class="project-card reveal">
+                                <div class="project-img">
+                                    <div class="img-placeholder auditoria-bg">
+                                        <i class="fas fa-network-wired"></i>
+                                    </div>
+                                </div>
+                                <div class="project-content">
+                                    <div class="project-header">
+                                        <div class="tech-badge-container" style="margin-bottom: 8px;">
+                                            <span class="tech-badge">👑 Full-Stack QA: Web, Mobile & Backend</span>
+                                        </div>
+                                        <h3>
+                                            <span class="lang-es">Auditoría 360° en Ecosistema de Alquiler: Urban
+                                                Scooter</span>
+                                            <span class="lang-en">360° Audit in Rental Ecosystem: Urban Scooter</span>
+                                        </h3>
+                                    </div>
+                                    <p>
+                                        <span class="lang-es">Auditoría completa de un ecosistema de alquiler de
+                                            patinetes cubriendo 3 capas arquitectónicas. Aplicación de estrategias de
+                                            prevención de fallos desde el Frontend hasta la Base de Datos.</span>
+                                        <span class="lang-en">Comprehensive audit of a scooter rental ecosystem covering
+                                            3 architectural layers. Application of defect prevention strategies from the
+                                            Frontend to the Database.</span>
+                                    </p>
+                                    <div style="margin-bottom: 20px;">
+                                        <strong style="font-size: 0.85rem; display: block; margin-bottom: 8px;">
+                                            <span class="lang-es">🎯 Puntos Clave:</span>
+                                            <span class="lang-en">🎯 Key Points:</span>
+                                        </strong>
+                                        <ul
+                                            style="font-size: 0.85rem; padding-left: 18px; list-style-type: disc; color: var(--text-muted);">
+                                            <li style="margin-bottom: 6px;">
+                                                <span class="lang-es"><strong>Pruebas Web:</strong> Validación funcional
+                                                    Frontend mediante análisis de valores límite (BVA).</span>
+                                                <span class="lang-en"><strong>Web Testing:</strong> Frontend functional
+                                                    validation using Boundary Value Analysis (BVA).</span>
+                                            </li>
+                                            <li style="margin-bottom: 6px;">
+                                                <span class="lang-es"><strong>Pruebas Mobile:</strong> Simulación de
+                                                    modo offline en Android, aislando fallos de sincronización.</span>
+                                                <span class="lang-en"><strong>Mobile Testing:</strong> Offline mode
+                                                    simulation in Android, isolating synchronization bugs.</span>
+                                            </li>
+                                            <li style="margin-bottom: 6px;">
+                                                <span class="lang-es"><strong>Base de Datos:</strong> Pruebas de
+                                                    inyección y consultas PostgreSQL para validar la integridad de
+                                                    datos.</span>
+                                                <span class="lang-en"><strong>Database:</strong> Injection testing and
+                                                    PostgreSQL queries to validate data integrity.</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="project-cta">
+                                        <a href="https://github.com/mvelez2793/09_Auditoria-Web-Movil-y-API---Urban-Scooter"
+                                            target="_blank" class="btn-link">
+                                            <span class="lang-es">👉 Ver Auditoría Completa en GitHub <i
+                                                    class="fab fa-github"></i></span>
+                                            <span class="lang-en">👉 See Complete Audit on GitHub <i
+                                                    class="fab fa-github"></i></span>
+                                        </a>
+                                    </div>
+                                    <div style="margin-top: 16px; display: flex; flex-wrap: wrap; gap: 4px;">
+                                        <span class="tech-badge">PostgreSQL</span>
+                                        <span class="tech-badge">Pruebas API</span>
+                                        <span class="tech-badge">Mobile Testing (Android)</span>
+                                        <span class="tech-badge">BVA</span>
+                                        <span class="tech-badge">Jira</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CATEGORÍA 2: Automatización de Pruebas (E2E & API) -->
+                    <div class="project-category-group" data-category="automation">
+                        <div class="category-header">
+                            <h3>🤖
+                                <span class="lang-es">Categoría 2: Automatización de Pruebas (E2E & API)</span>
+                                <span class="lang-en">Category 2: Test Automation (E2E & API)</span>
+                            </h3>
+                            <div class="category-divider"></div>
+                        </div>
+                        <div class="projects-grid">
+                            <!-- Tarjeta 2 -->
+                            <div class="project-card reveal">
+                                <div class="project-img">
+                                    <div class="img-placeholder automation-bg">
+                                        <i class="fas fa-robot"></i>
+                                    </div>
+                                </div>
+                                <div class="project-content">
+                                    <div class="project-header">
+                                        <div class="tech-badge-container" style="margin-bottom: 8px;">
+                                            <span class="tech-badge">🚕 Test Automation: Web UI (E2E)</span>
+                                        </div>
+                                        <h3>
+                                            <span class="lang-es">Automatización End-to-End con Selenium y Python: Urban
+                                                Routes</span>
+                                            <span class="lang-en">End-to-End Automation with Selenium and Python: Urban
+                                                Routes</span>
+                                        </h3>
+                                    </div>
+                                    <p>
+                                        <span class="lang-es">Desarrollo de un framework de automatización UI escalable
+                                            estructurado bajo el patrón Page Object Model (POM), diseñado para
+                                            garantizar el flujo crítico de asignación de taxis.</span>
+                                        <span class="lang-en">Development of a scalable UI automation framework
+                                            structured under the Page Object Model (POM) pattern, designed to guarantee
+                                            the critical taxi assignment flow.</span>
+                                    </p>
+                                    <div style="margin-bottom: 20px;">
+                                        <strong style="font-size: 0.85rem; display: block; margin-bottom: 8px;">
+                                            <span class="lang-es">🎯 Puntos Clave:</span>
+                                            <span class="lang-en">🎯 Key Points:</span>
+                                        </strong>
+                                        <ul
+                                            style="font-size: 0.85rem; padding-left: 18px; list-style-type: disc; color: var(--text-muted);">
+                                            <li style="margin-bottom: 6px;">
+                                                <span class="lang-es"><strong>E2E Automatizado:</strong> Cobertura del
+                                                    Happy Path crítico de reserva de viajes.</span>
+                                                <span class="lang-en"><strong>Automated E2E:</strong> Full coverage of
+                                                    the critical ride-booking Happy Path.</span>
+                                            </li>
+                                            <li style="margin-bottom: 6px;">
+                                                <span class="lang-es"><strong>Gestión del DOM:</strong> Esperas
+                                                    explícitas avanzadas (WebDriverWait) e inyección de JS.</span>
+                                                <span class="lang-en"><strong>DOM Management:</strong> Advanced explicit
+                                                    waits (WebDriverWait) and JS injection.</span>
+                                            </li>
+                                            <li style="margin-bottom: 6px;">
+                                                <span class="lang-es"><strong>Intercepción de Red:</strong> Captura
+                                                    automatizada de códigos SMS directamente del tráfico de red.</span>
+                                                <span class="lang-en"><strong>Network Interception:</strong> Automated
+                                                    SMS code capture directly from network traffic.</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="project-cta">
+                                        <a href="https://github.com/mvelez2793/08_Automatizacion-Web-UI-E2E-Urban-Routes"
+                                            target="_blank" class="btn-link">
+                                            <span class="lang-es">👉 Ver Framework en GitHub <i
+                                                    class="fab fa-github"></i></span>
+                                            <span class="lang-en">👉 See Framework on GitHub <i
+                                                    class="fab fa-github"></i></span>
+                                        </a>
+                                    </div>
+                                    <div style="margin-top: 16px; display: flex; flex-wrap: wrap; gap: 4px;">
+                                        <span class="tech-badge">Python 3.x</span>
+                                        <span class="tech-badge">Selenium WebDriver</span>
+                                        <span class="tech-badge">Pytest</span>
+                                        <span class="tech-badge">Arquitectura POM</span>
+                                        <span class="tech-badge">Intercepción de Red</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Tarjeta 3 -->
+                            <div class="project-card reveal">
+                                <div class="project-img">
+                                    <div class="img-placeholder automation-bg">
+                                        <i class="fas fa-gears"></i>
+                                    </div>
+                                </div>
+                                <div class="project-content">
+                                    <div class="project-header">
+                                        <div class="tech-badge-container" style="margin-bottom: 8px;">
+                                            <span class="tech-badge">⚙️ Test Automation: Backend & API</span>
+                                        </div>
+                                        <h3>
+                                            <span class="lang-es">Automatización de API REST con Python y Pytest: Urban
+                                                Grocers</span>
+                                            <span class="lang-en">REST API Automation with Python and Pytest: Urban
+                                                Grocers</span>
+                                        </h3>
+                                    </div>
+                                    <p>
+                                        <span class="lang-es">Construcción de una suite de pruebas automatizadas y
+                                            modulares para validar las restricciones lógicas y de seguridad en los
+                                            microservicios backend.</span>
+                                        <span class="lang-en">Construction of an automated and modular test suite to
+                                            validate logical and security constraints in backend microservices.</span>
+                                    </p>
+                                    <div style="margin-bottom: 20px;">
+                                        <strong style="font-size: 0.85rem; display: block; margin-bottom: 8px;">
+                                            <span class="lang-es">🎯 Puntos Clave:</span>
+                                            <span class="lang-en">🎯 Key Points:</span>
+                                        </strong>
+                                        <ul
+                                            style="font-size: 0.85rem; padding-left: 18px; list-style-type: disc; color: var(--text-muted);">
+                                            <li style="margin-bottom: 6px;">
+                                                <span class="lang-es"><strong>Arquitectura Modular:</strong> Separación
+                                                    limpia de configuraciones, datos JSON y Test Runner.</span>
+                                                <span class="lang-en"><strong>Modular Architecture:</strong> Clean
+                                                    separation of configurations, JSON data, and Test Runner.</span>
+                                            </li>
+                                            <li style="margin-bottom: 6px;">
+                                                <span class="lang-es"><strong>Aislamiento de Bugs:</strong> Detección de
+                                                    código de respuesta incorrecto (falso 201 en lugar de 400).</span>
+                                                <span class="lang-en"><strong>Bug Isolation:</strong> Detection of
+                                                    incorrect API responses (false 201 instead of 400 Bad
+                                                    Request).</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="project-cta">
+                                        <a href="https://github.com/mvelez2793/07_Automatizacion-de-Pruebas-API-Python-Pytest-Urban-Grocers"
+                                            target="_blank" class="btn-link">
+                                            <span class="lang-es">👉 Ver Suite Automatizada en GitHub <i
+                                                    class="fab fa-github"></i></span>
+                                            <span class="lang-en">👉 See Automated Suite on GitHub <i
+                                                    class="fab fa-github"></i></span>
+                                        </a>
+                                    </div>
+                                    <div style="margin-top: 16px; display: flex; flex-wrap: wrap; gap: 4px;">
+                                        <span class="tech-badge">Python 3</span>
+                                        <span class="tech-badge">Pytest</span>
+                                        <span class="tech-badge">Requests</span>
+                                        <span class="tech-badge">Pruebas de Integración Backend</span>
+                                        <span class="tech-badge">BVA</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CATEGORÍA 3: Pruebas Backend, Logs y SQL -->
+                    <div class="project-category-group" data-category="backend">
+                        <div class="category-header">
+                            <h3>🐧
+                                <span class="lang-es">Categoría 3: Pruebas Backend, Logs y SQL</span>
+                                <span class="lang-en">Category 3: Backend Testing, Logs & SQL</span>
+                            </h3>
+                            <div class="category-divider"></div>
+                        </div>
+                        <div class="projects-grid">
+                            <!-- Tarjeta 4 -->
+                            <div class="project-card reveal">
+                                <div class="project-img">
+                                    <div class="img-placeholder backend-bg">
+                                        <i class="fas fa-terminal"></i>
+                                    </div>
+                                </div>
+                                <div class="project-content">
+                                    <div class="project-header">
+                                        <div class="tech-badge-container" style="margin-bottom: 8px;">
+                                            <span class="tech-badge">🐧 Backend Testing: SQL & Servidores Linux</span>
+                                        </div>
+                                        <h3>
+                                            <span class="lang-es">Auditoría de Base de Datos y Análisis de Logs Linux:
+                                                Chicago Taxi</span>
+                                            <span class="lang-en">Database Audit and Linux Log Analysis: Chicago
+                                                Taxi</span>
+                                        </h3>
+                                    </div>
+                                    <p>
+                                        <span class="lang-es">Actuación como QA Data Tester accediendo directamente a la
+                                            consola de servidores remotos Linux para rastrear registros de errores y
+                                            validar algoritmos de bases de datos.</span>
+                                        <span class="lang-en">Acting as a QA Data Tester, accessing remote Linux server
+                                            consoles directly to trace error logs and validate database
+                                            algorithms.</span>
+                                    </p>
+                                    <div style="margin-bottom: 20px;">
+                                        <strong style="font-size: 0.85rem; display: block; margin-bottom: 8px;">
+                                            <span class="lang-es">🎯 Puntos Clave:</span>
+                                            <span class="lang-en">🎯 Key Points:</span>
+                                        </strong>
+                                        <ul
+                                            style="font-size: 0.85rem; padding-left: 18px; list-style-type: disc; color: var(--text-muted);">
+                                            <li style="margin-bottom: 6px;">
+                                                <span class="lang-es"><strong>Diagnóstico en Linux:</strong> Análisis de
+                                                    logs y depuración remota de errores 400/500 usando Bash y
+                                                    Regex.</span>
+                                                <span class="lang-en"><strong>Linux Diagnostics:</strong> Log analysis
+                                                    and remote debugging of 400/500 errors using Bash and Regex.</span>
+                                            </li>
+                                            <li style="margin-bottom: 6px;">
+                                                <span class="lang-es"><strong>Consultas SQL:</strong> Auditoría
+                                                    financiera de tarifas dinámicas con consultas complejas en
+                                                    PostgreSQL.</span>
+                                                <span class="lang-en"><strong>SQL Queries:</strong> Financial auditing
+                                                    of dynamic rates using complex PostgreSQL queries.</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="project-cta">
+                                        <a href="https://github.com/mvelez2793/06_Analisis-de-Datos-y-Backend-SQL-Linux-Console-Chicago-Taxi-"
+                                            target="_blank" class="btn-link">
+                                            <span class="lang-es">👉 Ver Scripts y Consultas SQL en GitHub <i
+                                                    class="fab fa-github"></i></span>
+                                            <span class="lang-en">👉 See Scripts & SQL Queries on GitHub <i
+                                                    class="fab fa-github"></i></span>
+                                        </a>
+                                    </div>
+                                    <div style="margin-top: 16px; display: flex; flex-wrap: wrap; gap: 4px;">
+                                        <span class="tech-badge">PostgreSQL</span>
+                                        <span class="tech-badge">Consola Linux (Bash)</span>
+                                        <span class="tech-badge">Regex</span>
+                                        <span class="tech-badge">Data Integrity Testing</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Tarjeta 5 -->
+                            <div class="project-card reveal">
+                                <div class="project-img">
+                                    <div class="img-placeholder backend-bg">
+                                        <i class="fas fa-database"></i>
+                                    </div>
+                                </div>
+                                <div class="project-content">
+                                    <div class="project-header">
+                                        <div class="tech-badge-container" style="margin-bottom: 8px;">
+                                            <span class="tech-badge">🚀 API Testing: Postman</span>
+                                        </div>
+                                        <h3>
+                                            <span class="lang-es">Negative Testing y Validación JSON en API REST: Urban
+                                                Grocers</span>
+                                            <span class="lang-en">Negative Testing and JSON Validation in REST API:
+                                                Urban Grocers</span>
+                                        </h3>
+                                    </div>
+                                    <p>
+                                        <span class="lang-es">Ejecución de pruebas de estrés y validación de
+                                            microservicios de entrega (Order and Go) y creación de kits de
+                                            productos.</span>
+                                        <span class="lang-en">Execution of stress testing and validation of delivery
+                                            microservices (Order and Go) and product kit creation.</span>
+                                    </p>
+                                    <div style="margin-bottom: 20px;">
+                                        <strong style="font-size: 0.85rem; display: block; margin-bottom: 8px;">
+                                            <span class="lang-es">🎯 Puntos Clave:</span>
+                                            <span class="lang-en">🎯 Key Points:</span>
+                                        </strong>
+                                        <ul
+                                            style="font-size: 0.85rem; padding-left: 18px; list-style-type: disc; color: var(--text-muted);">
+                                            <li style="margin-bottom: 6px;">
+                                                <span class="lang-es"><strong>Pruebas de Estrés:</strong> Validación de
+                                                    límites de peso, tiempos de respuesta y caracteres
+                                                    especiales.</span>
+                                                <span class="lang-en"><strong>Stress Testing:</strong> Validation of
+                                                    weight limits, response times, and special characters.</span>
+                                            </li>
+                                            <li style="margin-bottom: 6px;">
+                                                <span class="lang-es"><strong>Negative Testing:</strong> Detección de
+                                                    fallos no controlados (Error 500) en el payload JSON.</span>
+                                                <span class="lang-en"><strong>Negative Testing:</strong> Detection of
+                                                    unhandled server failures (500 Error) in JSON payloads.</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="project-cta">
+                                        <a href="https://github.com/mvelez2793/04_Pruebas-de-API-Backend-RESTful-Urban-Grocers"
+                                            target="_blank" class="btn-link">
+                                            <span class="lang-es">👉 Ver Colecciones de Postman en GitHub <i
+                                                    class="fab fa-github"></i></span>
+                                            <span class="lang-en">👉 See Postman Collections on GitHub <i
+                                                    class="fab fa-github"></i></span>
+                                        </a>
+                                    </div>
+                                    <div style="margin-top: 16px; display: flex; flex-wrap: wrap; gap: 4px;">
+                                        <span class="tech-badge">Postman</span>
+                                        <span class="tech-badge">JSON</span>
+                                        <span class="tech-badge">Códigos HTTP</span>
+                                        <span class="tech-badge">Pruebas de Frontera</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CATEGORÍA 4: Mobile Testing (Android) -->
+                    <div class="project-category-group" data-category="mobile">
+                        <div class="category-header">
+                            <h3>📱
+                                <span class="lang-es">Categoría 4: Mobile Testing (Android)</span>
+                                <span class="lang-en">Category 4: Mobile Testing (Android)</span>
+                            </h3>
+                            <div class="category-divider"></div>
+                        </div>
+                        <div class="projects-grid">
+                            <!-- Tarjeta 6 -->
+                            <div class="project-card reveal">
+                                <div class="project-img">
+                                    <div class="img-placeholder mobile-bg">
+                                        <i class="fas fa-mobile-screen-button"></i>
+                                    </div>
+                                </div>
+                                <div class="project-content">
+                                    <div class="project-header">
+                                        <div class="tech-badge-container" style="margin-bottom: 8px;">
+                                            <span class="tech-badge">📱 Mobile Testing: UI/UX & Hardware</span>
+                                        </div>
+                                        <h3>
+                                            <span class="lang-es">QA Funcional en App Móvil Android: Urban.Lunch</span>
+                                            <span class="lang-en">Functional QA in Android Mobile App:
+                                                Urban.Lunch</span>
+                                        </h3>
+                                    </div>
+                                    <p>
+                                        <span class="lang-es">Ejecución de pruebas táctiles, usabilidad y estrés en
+                                            entorno emulado (Pixel 2 / Samsung Galaxy A55) para la app de
+                                            delivery.</span>
+                                        <span class="lang-en">Execution of touch, usability, and stress tests in an
+                                            emulated environment (Pixel 2 / Samsung Galaxy A55) for the delivery
+                                            app.</span>
+                                    </p>
+                                    <div style="margin-bottom: 20px;">
+                                        <strong style="font-size: 0.85rem; display: block; margin-bottom: 8px;">
+                                            <span class="lang-es">🎯 Puntos Clave:</span>
+                                            <span class="lang-en">🎯 Key Points:</span>
+                                        </strong>
+                                        <ul
+                                            style="font-size: 0.85rem; padding-left: 18px; list-style-type: disc; color: var(--text-muted);">
+                                            <li style="margin-bottom: 6px;">
+                                                <span class="lang-es"><strong>UI/UX Móvil:</strong> Aislamiento de
+                                                    bloqueadores lógicos en carrito y problemas visuales de
+                                                    superposición.</span>
+                                                <span class="lang-en"><strong>Mobile UI/UX:</strong> Isolation of
+                                                    logical shopping cart blockers and visual overlap issues.</span>
+                                            </li>
+                                            <li style="margin-bottom: 6px;">
+                                                <span class="lang-es"><strong>Integración de Hardware:</strong>
+                                                    Simulación de fallos al denegar permisos de geolocalización y
+                                                    red.</span>
+                                                <span class="lang-en"><strong>Hardware Integration:</strong> Failure
+                                                    simulation by denying geolocation and network permissions.</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="project-cta">
+                                        <a href="https://github.com/mvelez2793/05_Pruebas-de-Aplicaciones-Moviles-Android-Urban.Lunch"
+                                            target="_blank" class="btn-link">
+                                            <span class="lang-es">👉 Ver Matrices Móviles en GitHub <i
+                                                    class="fab fa-github"></i></span>
+                                            <span class="lang-en">👉 See Mobile Matrices on GitHub <i
+                                                    class="fab fa-github"></i></span>
+                                        </a>
+                                    </div>
+                                    <div style="margin-top: 16px; display: flex; flex-wrap: wrap; gap: 4px;">
+                                        <span class="tech-badge">Android Studio (Emuladores)</span>
+                                        <span class="tech-badge">Pruebas de SO/Hardware</span>
+                                        <span class="tech-badge">UI/UX Testing</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CATEGORÍA 5: Ingeniería de Pruebas Manuales (Funcionales y Diseño) -->
+                    <div class="project-category-group" data-category="manual">
+                        <div class="category-header">
+                            <h3>🌐
+                                <span class="lang-es">Categoría 5: Ingeniería de Pruebas Manuales (Funcionales y
+                                    Diseño)</span>
+                                <span class="lang-en">Category 5: Manual Testing Engineering (Functional &
+                                    Design)</span>
+                            </h3>
+                            <div class="category-divider"></div>
+                        </div>
+                        <div class="projects-grid">
+                            <!-- Tarjeta 7 -->
+                            <div class="project-card reveal">
+                                <div class="project-img">
+                                    <div class="img-placeholder manual-bg">
+                                        <i class="fas fa-cubes"></i>
+                                    </div>
+                                </div>
+                                <div class="project-content">
+                                    <div class="project-header">
+                                        <div class="tech-badge-container" style="margin-bottom: 8px;">
+                                            <span class="tech-badge">🌍 Funcional QA: Cross-Browser Testing</span>
+                                        </div>
+                                        <h3>
+                                            <span class="lang-es">Pruebas Web UI, Regresión y Compatibilidad: Urban
+                                                Routes</span>
+                                            <span class="lang-en">Web UI, Regression, and Compatibility Testing: Urban
+                                                Routes</span>
+                                        </h3>
+                                    </div>
+                                    <p>
+                                        <span class="lang-es">Estrategia integral para asegurar la fidelidad visual y
+                                            funcional de la plataforma de taxis bajo múltiples entornos.</span>
+                                        <span class="lang-en">Comprehensive strategy to ensure visual and functional
+                                            fidelity of the taxi platform under multiple environments.</span>
+                                    </p>
+                                    <div style="margin-bottom: 20px;">
+                                        <strong style="font-size: 0.85rem; display: block; margin-bottom: 8px;">
+                                            <span class="lang-es">🎯 Puntos Clave:</span>
+                                            <span class="lang-en">🎯 Key Points:</span>
+                                        </strong>
+                                        <ul
+                                            style="font-size: 0.85rem; padding-left: 18px; list-style-type: disc; color: var(--text-muted);">
+                                            <li style="margin-bottom: 6px;">
+                                                <span class="lang-es"><strong>Multi-Entorno:</strong> Pruebas visuales y
+                                                    funcionales en Chrome y Firefox con múltiples resoluciones.</span>
+                                                <span class="lang-en"><strong>Multi-Environment:</strong> Visual and
+                                                    functional tests on Chrome and Firefox at multiple
+                                                    resolutions.</span>
+                                            </li>
+                                            <li style="margin-bottom: 6px;">
+                                                <span class="lang-es"><strong>Pasarela de Pago:</strong> Validación
+                                                    exhaustiva del flujo de pago mediante partición de
+                                                    equivalencias.</span>
+                                                <span class="lang-en"><strong>Payment Gateway:</strong> Comprehensive
+                                                    validation of the checkout flow using equivalence
+                                                    partitioning.</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="project-cta">
+                                        <a href="https://github.com/mvelez2793/03_Urban-Routes-Pruebas-de-Integracion-y-Logica-reserva"
+                                            target="_blank" class="btn-link">
+                                            <span class="lang-es">👉 Ver Matrices de UI en GitHub <i
+                                                    class="fab fa-github"></i></span>
+                                            <span class="lang-en">👉 See UI Matrices on GitHub <i
+                                                    class="fab fa-github"></i></span>
+                                        </a>
+                                    </div>
+                                    <div style="margin-top: 16px; display: flex; flex-wrap: wrap; gap: 4px;">
+                                        <span class="tech-badge">Cross-Browser Testing</span>
+                                        <span class="tech-badge">Pruebas de Regresión</span>
+                                        <span class="tech-badge">UI/UX</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Tarjeta 8 -->
+                            <div class="project-card reveal">
+                                <div class="project-img">
+                                    <div class="img-placeholder manual-bg">
+                                        <i class="fas fa-sitemap"></i>
+                                    </div>
+                                </div>
+                                <div class="project-content">
+                                    <div class="project-header">
+                                        <div class="tech-badge-container" style="margin-bottom: 8px;">
+                                            <span class="tech-badge">🧠 QA Analysis: Diseño de Pruebas</span>
+                                        </div>
+                                        <h3>
+                                            <span class="lang-es">Diseño de Casos de Prueba, BVA y Mapas Mentales: Urban
+                                                Routes</span>
+                                            <span class="lang-en">Test Case Design, BVA, and Mind Maps: Urban
+                                                Routes</span>
+                                        </h3>
+                                    </div>
+                                    <p>
+                                        <span class="lang-es">Ingeniería de requerimientos y descomposición de lógica de
+                                            negocio para la funcionalidad de tarifas de viajes.</span>
+                                        <span class="lang-en">Requirements engineering and business logic decomposition
+                                            for trip fare functionality.</span>
+                                    </p>
+                                    <div style="margin-bottom: 20px;">
+                                        <strong style="font-size: 0.85rem; display: block; margin-bottom: 8px;">
+                                            <span class="lang-es">🎯 Puntos Clave:</span>
+                                            <span class="lang-en">🎯 Key Points:</span>
+                                        </strong>
+                                        <ul
+                                            style="font-size: 0.85rem; padding-left: 18px; list-style-type: disc; color: var(--text-muted);">
+                                            <li style="margin-bottom: 6px;">
+                                                <span class="lang-es"><strong>Modelado:</strong> Creación de mapas
+                                                    mentales y diagramas de flujo para lógica de tarifas.</span>
+                                                <span class="lang-en"><strong>Modeling:</strong> Flowcharts and mind
+                                                    maps design mapping travel fare calculation algorithms.</span>
+                                            </li>
+                                            <li style="margin-bottom: 6px;">
+                                                <span class="lang-es"><strong>Diseño de Pruebas:</strong> Cobertura
+                                                    frontend/backend estructurando matrices de BVA y partición de
+                                                    clases.</span>
+                                                <span class="lang-en"><strong>Test Design:</strong> Frontend/backend
+                                                    coverage designing BVA and equivalence partitioning matrices.</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="project-cta">
+                                        <a href="https://github.com/mvelez2793/02_Urban-Routes---Pruebas-de-Regresion-y-Reporte-de-Errores"
+                                            target="_blank" class="btn-link">
+                                            <span class="lang-es">👉 Ver Artefactos de Diseño en GitHub <i
+                                                    class="fab fa-github"></i></span>
+                                            <span class="lang-en">👉 See Design Artifacts on GitHub <i
+                                                    class="fab fa-github"></i></span>
+                                        </a>
+                                    </div>
+                                    <div style="margin-top: 16px; display: flex; flex-wrap: wrap; gap: 4px;">
+                                        <span class="tech-badge">Mapas Mentales</span>
+                                        <span class="tech-badge">Diagramas de Flujo</span>
+                                        <span class="tech-badge">BVA</span>
+                                        <span class="tech-badge">Equivalence Partitioning</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Tarjeta 9 -->
+                            <div class="project-card reveal">
+                                <div class="project-img">
+                                    <div class="img-placeholder manual-bg">
+                                        <i class="fas fa-bug"></i>
+                                    </div>
+                                </div>
+                                <div class="project-content">
+                                    <div class="project-header">
+                                        <div class="tech-badge-container" style="margin-bottom: 8px;">
+                                            <span class="tech-badge">🐞 Bug Tracking & Gestión</span>
+                                        </div>
+                                        <h3>
+                                            <span class="lang-es">Ejecución de Regresión y Ciclo de Vida de Defectos:
+                                                Urban Routes</span>
+                                            <span class="lang-en">Regression Execution and Defect Life Cycle: Urban
+                                                Routes</span>
+                                        </h3>
+                                    </div>
+                                    <p>
+                                        <span class="lang-es">Trazabilidad de defectos y gestión del "Bug Life Cycle"
+                                            aplicando estándares internacionales.</span>
+                                        <span class="lang-en">Defect traceability and "Bug Life Cycle" management
+                                            applying international standards.</span>
+                                    </p>
+                                    <div style="margin-bottom: 20px;">
+                                        <strong style="font-size: 0.85rem; display: block; margin-bottom: 8px;">
+                                            <span class="lang-es">🎯 Puntos Clave:</span>
+                                            <span class="lang-en">🎯 Key Points:</span>
+                                        </strong>
+                                        <ul
+                                            style="font-size: 0.85rem; padding-left: 18px; list-style-type: disc; color: var(--text-muted);">
+                                            <li style="margin-bottom: 6px;">
+                                                <span class="lang-es"><strong>Reporte en Jira:</strong> Registro
+                                                    detallado de bugs críticos evaluando severidad, prioridad y pasos de
+                                                    reproducción.</span>
+                                                <span class="lang-en"><strong>Jira Reporting:</strong> Detailed logging
+                                                    of critical bugs evaluating severity, priority, and steps.</span>
+                                            </li>
+                                            <li style="margin-bottom: 6px;">
+                                                <span class="lang-es"><strong>Ciclo de Defectos:</strong> Control de
+                                                    regresiones y trazabilidad de fallos bajo estándares ISTQB.</span>
+                                                <span class="lang-en"><strong>Defect Lifecycle:</strong> Regression
+                                                    control and bug tracking adhering to ISTQB standards.</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="project-cta">
+                                        <a href="https://github.com/mvelez2793/01_Urban-Routes---Dise-o-de-Pruebas-y-An-lisis-de-Requerimientos"
+                                            target="_blank" class="btn-link">
+                                            <span class="lang-es">👉 Ver Reportes en GitHub <i
+                                                    class="fab fa-github"></i></span>
+                                            <span class="lang-en">👉 See Reports on GitHub <i
+                                                    class="fab fa-github"></i></span>
+                                        </a>
+                                    </div>
+                                    <div style="margin-top: 16px; display: flex; flex-wrap: wrap; gap: 4px;">
+                                        <span class="tech-badge">Jira</span>
+                                        <span class="tech-badge">Bug Tracking</span>
+                                        <span class="tech-badge">Pruebas de Regresión</span>
+                                        <span class="tech-badge">ISTQB Standards</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -171,7 +960,10 @@
         <section id="experience" class="experience section-padding">
             <div class="container">
                 <div class="section-title">
-                    <h2 class="reveal">Experiencia Profesional</h2>
+                    <h2 class="reveal">
+                        <span class="lang-es">Experiencia Profesional</span>
+                        <span class="lang-en">Professional Experience</span>
+                    </h2>
                     <div class="underline"></div>
                 </div>
 
@@ -180,22 +972,47 @@
                     <div class="cert-card reveal">
                         <div class="cert-header">
                             <div class="cert-icon"><i class="fas fa-briefcase"></i></div>
-                            <span class="cert-year">Mar 2026 - Actualidad</span>
+                            <span class="cert-year">
+                                <span class="lang-es">Marzo 2026 – Actualidad</span>
+                                <span class="lang-en">March 2026 – Present</span>
+                            </span>
                         </div>
                         <h3>Freelancer - QA Engineer</h3>
-                        <p class="institution">Proyecto Independiente</p>
-                        <p class="cert-desc">Aseguramiento de calidad para plataforma de impresión 3D. Diseño de estrategia BDD, ejecución de pruebas de Regresión y Sanity. Aislamiento de fallos con Chrome DevTools. Implementación de estrategia Shift-Left mitigando riesgos críticos.</p>
+                        <p class="institution">
+                            <span class="lang-es">Proyecto Independiente</span>
+                            <span class="lang-en">Independent Project</span>
+                        </p>
+                        <p class="cert-desc">
+                            <span class="lang-es">Diseño de estrategias BDD con Gherkin, ejecución de ciclos de
+                                regresión en pasarelas de pago y enfoque preventivo (Shift-Left Testing) mitigando
+                                riesgos críticos.</span>
+                            <span class="lang-en">Design of BDD strategies with Gherkin, execution of regression cycles
+                                in payment gateways, and a preventive approach (Shift-Left Testing) to mitigate critical
+                                risks.</span>
+                        </p>
                     </div>
 
                     <!-- CNE -->
                     <div class="cert-card reveal">
                         <div class="cert-header">
                             <div class="cert-icon"><i class="fas fa-server"></i></div>
-                            <span class="cert-year">Jun 2022 - Ene 2026</span>
+                            <span class="cert-year">
+                                <span class="lang-es">Jun 2022 - Ene 2026</span>
+                                <span class="lang-en">Jun 2022 - Jan 2026</span>
+                            </span>
                         </div>
-                        <h3>Soporte Técnico y QA</h3>
+                        <h3>
+                            <span class="lang-es">Soporte Técnico y Aseguramiento de Calidad</span>
+                            <span class="lang-en">Technical Support & Quality Assurance Analyst</span>
+                        </h3>
                         <p class="institution">CNE Manabí</p>
-                        <p class="cert-desc">Testing Funcional, E2E y de Regresión. Pruebas de estrés y rendimiento. QA de seguridad y monitoreo de 150 túneles de datos a nivel nacional asegurando el 100% de disponibilidad.</p>
+                        <p class="cert-desc">
+                            <span class="lang-es">Validación de infraestructura, pruebas de estrés, seguridad de
+                                sistemas operativos y monitoreo de 150 túneles de datos dedicados manteniendo la
+                                disponibilidad al 100%.</span>
+                            <span class="lang-en">Infrastructure validation, stress testing, operating systems security,
+                                and monitoring of 150 dedicated data tunnels maintaining 100% availability.</span>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -205,7 +1022,10 @@
         <section id="certifications" class="certifications section-padding bg-alt">
             <div class="container">
                 <div class="section-title">
-                    <h2 class="reveal">Títulos Profesionales y Certificaciones</h2>
+                    <h2 class="reveal">
+                        <span class="lang-es">Formación Académica e Idiomas</span>
+                        <span class="lang-en">Academic Education & Languages</span>
+                    </h2>
                     <div class="underline"></div>
                 </div>
 
@@ -213,13 +1033,21 @@
                     <!-- Bootcamp -->
                     <div class="cert-card reveal">
                         <div class="cert-header">
-                            <div class="cert-icon"><i class="fas fa-bug"></i></div>
+                            <div class="cert-icon"><i class="fas fa-graduation-cap"></i></div>
                             <span class="cert-year">2026</span>
                         </div>
-                        <h3>QA Engineer Specialization</h3>
+                        <h3>
+                            <span class="lang-es">Especialización en QA Engineering</span>
+                            <span class="lang-en">QA Engineer Specialization</span>
+                        </h3>
                         <p class="institution">TripleTen Bootcamp</p>
-                        <p class="cert-desc">Bootcamp intensivo en Quality Assurance Engineering. Stack técnico:
-                            Selenium WebDriver, Postman, Jira, SQL, Android Studio. Metodologías ágiles.</p>
+                        <p class="cert-desc">
+                            <span class="lang-es">Bootcamp intensivo de QA. Enfoque en pruebas automatizadas y manuales,
+                                Selenium WebDriver, Pytest, Postman, SQL, Android Studio y metodologías ágiles.</span>
+                            <span class="lang-en">Intensive QA Bootcamp. Focused on manual and automated testing,
+                                Selenium WebDriver, Pytest, Postman, SQL, Android Studio, and agile
+                                methodologies.</span>
+                        </p>
                     </div>
 
                     <!-- Ingeniería -->
@@ -228,77 +1056,44 @@
                             <div class="cert-icon"><i class="fas fa-laptop-code"></i></div>
                             <span class="cert-year">2018</span>
                         </div>
-                        <h3>Ingeniería en Sistemas Informáticos</h3>
-                        <p class="institution">Universidad Técnica de Manabí (UTM)</p>
-                        <p class="cert-desc">Formación integral en ingeniería de software: fundamentos de programación
-                            sólidos, bases de datos, arquitectura de software y redes.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="projects section-padding">
-            <div class="container">
-                <div class="section-title">
-                    <h2 class="reveal">Proyectos Destacados</h2>
-                    <div class="underline"></div>
-                </div>
-
-                <div class="projects-grid">
-                    <!-- Project 1: Urban Grocers -->
-                    <div class="project-card reveal">
-                        <div class="project-img">
-                            <div class="img-placeholder grocers-bg">
-                                <i class="fas fa-shopping-cart"></i>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <div class="project-header">
-                                <h3>Urban Grocers – QA Testing</h3>
-                                <div class="tech-badge-container">
-                                    <span class="tech-badge">API Testing</span>
-                                    <span class="tech-badge">Automatización</span>
-                                    <span class="tech-badge">Boundary Testing</span>
-                                    <span class="tech-badge">POSTMAN</span>
-                                </div>
-                            </div>
-                            <p>Construcción de suites automatizadas para la validación de endpoints y consistencia de esquemas de respuesta JSON. Aplicación de Boundary Testing (pruebas de frontera) para mitigación de riesgos.</p>
-                            <div class="project-cta">
-                                <a href="https://github.com/mvelez2793/qa-project-Urban-Grocers-app-es" target="_blank"
-                                    class="btn-link">
-                                    Ver en GitHub <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
+                        <h3>
+                            <span class="lang-es">Ingeniería en Sistemas Informáticos</span>
+                            <span class="lang-en">Systems Engineering</span>
+                        </h3>
+                        <p class="institution">
+                            <span class="lang-es">Universidad Técnica de Manabí (UTM)</span>
+                            <span class="lang-en">Technical University of Manabí (UTM)</span>
+                        </p>
+                        <p class="cert-desc">
+                            <span class="lang-es">Formación integral en fundamentos de ingeniería de software, bases de
+                                datos relacionales, algoritmos, redes y seguridad de la información.</span>
+                            <span class="lang-en">Comprehensive training in software engineering fundamentals,
+                                relational databases, algorithms, networking, and information security.</span>
+                        </p>
                     </div>
 
-                    <!-- Project 2: Urban Routes -->
-                    <div class="project-card reveal">
-                        <div class="project-img">
-                            <div class="img-placeholder routes-bg">
-                                <i class="fas fa-map-marked-alt"></i>
-                            </div>
+                    <!-- Idiomas -->
+                    <div class="cert-card reveal">
+                        <div class="cert-header">
+                            <div class="cert-icon"><i class="fas fa-globe"></i></div>
+                            <span class="cert-badge">B1 Technical</span>
                         </div>
-                        <div class="project-content">
-                            <div class="project-header">
-                                <h3>Urban Routes – QA Testing</h3>
-                                <div class="tech-badge-container">
-                                    <span class="tech-badge">E2E Testing</span>
-                                    <span class="tech-badge">Python</span>
-                                    <span class="tech-badge">Selenium WebDriver</span>
-                                    <span class="tech-badge">POM</span>
-                                </div>
-                            </div>
-                            <p>Diseño e implementación de un framework de automatización desde cero utilizando el patrón Page Object Model (POM). Gestión de elementos dinámicos (modales/esperas explícitas) y automatización de captura de SMS.</p>
-                            <p>Se logró una cobertura del 85% en flujos críticos, reduciendo el tiempo de ejecución en un 70% frente al testing manual.</p>
-                            <div class="project-cta">
-                                <a href="https://github.com/mvelez2793/qa-project-Urban-Routes-es" target="_blank"
-                                    class="btn-link">
-                                    Ver en GitHub <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
+                        <h3>
+                            <span class="lang-es">Idiomas</span>
+                            <span class="lang-en">Languages</span>
+                        </h3>
+                        <p class="institution">
+                            <span class="lang-es">Competencia Lingüística</span>
+                            <span class="lang-en">Linguistic Competencies</span>
+                        </p>
+                        <p class="cert-desc">
+                            <span class="lang-es"><strong>Español:</strong> Nativo.<br><strong>Inglés:</strong>
+                                Intermedio B1 (Enfoque técnico orientado a lectura de requerimientos y documentación
+                                precisa de defectos).</span>
+                            <span class="lang-en"><strong>Spanish:</strong> Native.<br><strong>English:</strong>
+                                Intermediate B1 (Technical focus oriented towards requirements analysis and precise
+                                defect documentation).</span>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -308,15 +1103,27 @@
         <section id="contact" class="contact section-padding bg-alt">
             <div class="container">
                 <div class="section-title">
-                    <h2 class="reveal">Contacto</h2>
+                    <h2 class="reveal">
+                        <span class="lang-es">Contacto</span>
+                        <span class="lang-en">Contact</span>
+                    </h2>
                     <div class="underline"></div>
                 </div>
 
                 <div class="contact-wrapper reveal">
                     <div class="contact-info">
-                        <h3>¿Listo para trabajar juntos?</h3>
-                        <p>Estoy disponible para posiciones remotas o híbridas. Hablemos sobre cómo puedo aportar valor
-                            a tu equipo de QA.</p>
+                        <h3>
+                            <span class="lang-es">¿Listo para trabajar juntos?</span>
+                            <span class="lang-en">Ready to work together?</span>
+                        </h3>
+                        <p>
+                            <span class="lang-es">Estoy disponible para posiciones remotas o híbridas. Hablemos sobre
+                                cómo puedo aportar valor a tu equipo de QA. Envíame un mensaje a través del formulario o
+                                conéctate conmigo en mis redes profesionales.</span>
+                            <span class="lang-en">I am available for remote or hybrid positions. Let's talk about how I
+                                can add value to your QA team. Send me a message through the form or connect with me on
+                                my professional networks.</span>
+                        </p>
 
                         <div class="contact-item">
                             <div class="icon-box">
@@ -330,21 +1137,17 @@
 
                         <div class="contact-item">
                             <div class="icon-box">
-                                <i class="fas fa-phone"></i>
-                            </div>
-                            <div class="info-content">
-                                <span>Teléfono</span>
-                                <p>+593 958960647</p>
-                            </div>
-                        </div>
-
-                        <div class="contact-item">
-                            <div class="icon-box">
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
                             <div class="info-content">
-                                <span>Ubicación</span>
-                                <p>Manabí, Ecuador</p>
+                                <span>
+                                    <span class="lang-es">Ubicación</span>
+                                    <span class="lang-en">Location</span>
+                                </span>
+                                <p>
+                                    <span class="lang-es">Manabí, Ecuador</span>
+                                    <span class="lang-en">Manabí, Ecuador</span>
+                                </p>
                             </div>
                         </div>
 
@@ -356,23 +1159,51 @@
                             <a href="https://github.com/mvelez2793" target="_blank" class="social-btn github">
                                 <i class="fab fa-github"></i> GitHub
                             </a>
+                            <a href="https://wa.me/593990168645?text=Hola%20Maria,%20he%20visto%20tu%20portafolio%20QA%20y%20me%20gustaria%20contactarte."
+                                target="_blank" class="social-btn whatsapp">
+                                <i class="fab fa-whatsapp"></i>
+                                <span class="lang-es">Contáctame por WhatsApp</span>
+                                <span class="lang-en">Contact me on WhatsApp</span>
+                            </a>
                         </div>
                     </div>
 
-                    <form class="contact-form" action="https://formspree.io/f/mkovbqgl" method="POST">
+                    <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="98c3f261-a5fc-4a9c-a2db-3d17e4920e6f">
                         <div class="form-group">
-                            <label for="name">Nombre Completo</label>
-                            <input type="text" id="name" name="name" placeholder="Ej. Juan Pérez" required>
+                            <label for="name">
+                                <span class="lang-es">Nombre Completo</span>
+                                <span class="lang-en">Full Name</span>
+                            </label>
+                            <input type="text" id="name" name="name" placeholder="Ej. Juan Pérez"
+                                data-placeholder-es="Ej. Juan Pérez" data-placeholder-en="e.g. John Doe" maxlength="50"
+                                pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ ]{2,50}"
+                                title="Solo letras y espacios (máximo 50 caracteres) / Only letters and spaces (max 50 chars)"
+                                required>
                         </div>
                         <div class="form-group">
-                            <label for="email">Correo Electrónico</label>
-                            <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+                            <label for="email">
+                                <span class="lang-es">Correo Electrónico</span>
+                                <span class="lang-en">Email Address</span>
+                            </label>
+                            <input type="email" id="email" name="email" placeholder="ejemplo@correo.com"
+                                data-placeholder-es="ejemplo@correo.com" data-placeholder-en="example@mail.com"
+                                pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[cC][oO][mM]"
+                                title="El correo debe terminar en .com / Email must end in .com" required>
                         </div>
                         <div class="form-group">
-                            <label for="message">Mensaje</label>
-                            <textarea id="message" name="message" rows="5" placeholder="¿En qué puedo ayudarte?" required></textarea>
+                            <label for="message">
+                                <span class="lang-es">Mensaje</span>
+                                <span class="lang-en">Message</span>
+                            </label>
+                            <textarea id="message" name="message" rows="5" placeholder="¿En qué puedo ayudarte?"
+                                data-placeholder-es="¿En qué puedo ayudarte?" data-placeholder-en="How can I help you?"
+                                maxlength="500" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary full-width">Enviar Mensaje</button>
+                        <button type="submit" class="btn btn-primary full-width">
+                            <span class="lang-es">Enviar Mensaje</span>
+                            <span class="lang-en">Send Message</span>
+                        </button>
                     </form>
                 </div>
             </div>
@@ -387,14 +1218,20 @@
                     <span>MAVM<span>.QA</span></span>
                 </div>
                 <div class="footer-nav">
-                    <a href="#home">Inicio</a>
-                    <a href="#about">Perfil</a>
-                    <a href="#experience">Experiencia</a>
-                    <a href="#certifications">Formación</a>
-                    <a href="#projects">Proyectos</a>
+                    <a href="#home"><span class="lang-es">Inicio</span><span class="lang-en">Home</span></a>
+                    <a href="#about"><span class="lang-es">Perfil</span><span class="lang-en">Profile</span></a>
+                    <a href="#projects"><span class="lang-es">Proyectos</span><span class="lang-en">Projects</span></a>
+                    <a href="#experience"><span class="lang-es">Experiencia</span><span
+                            class="lang-en">Experience</span></a>
+                    <a href="#certifications"><span class="lang-es">Formación</span><span
+                            class="lang-en">Education</span></a>
                 </div>
-                <p class="copyright">&copy; <span id="current-year"></span> María Auxiliadora Vélez Mendoza. Todos los
-                    derechos reservados.</p>
+                <p class="copyright">
+                    <span class="lang-es">&copy; <span id="current-year-es"></span> María Auxiliadora Vélez Mendoza.
+                        Todos los derechos reservados.</span>
+                    <span class="lang-en">&copy; <span id="current-year-en"></span> María Auxiliadora Vélez Mendoza. All
+                        rights reserved.</span>
+                </p>
             </div>
         </div>
     </footer>

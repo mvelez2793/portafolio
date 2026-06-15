@@ -1,8 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Current Year in Footer
-    const yearElement = document.getElementById('current-year');
-    if (yearElement) {
-        yearElement.textContent = new Date().getFullYear();
+    const yearEs = document.getElementById('current-year-es');
+    const yearEn = document.getElementById('current-year-en');
+    const currentYear = new Date().getFullYear();
+    if (yearEs) {
+        yearEs.textContent = currentYear;
+    }
+    if (yearEn) {
+        yearEn.textContent = currentYear;
     }
 
     // Theme Toggle (Dark/Light Mode)
@@ -39,6 +44,47 @@ document.addEventListener('DOMContentLoaded', () => {
         updateThemeIcon(isDark ? 'dark' : 'light');
     });
 
+    // Language Toggle (ES/EN)
+    const langBtns = document.querySelectorAll('.lang-btn');
+    const pageTitles = {
+        es: "María Auxiliadora Vélez Mendoza | Portafolio de Ingeniería de Pruebas (QA)",
+        en: "María Auxiliadora Vélez Mendoza | QA Engineering Portfolio"
+    };
+
+    function updateLanguage(lang) {
+        document.documentElement.setAttribute('lang', lang);
+        
+        // Update browser tab title
+        document.title = pageTitles[lang] || pageTitles.es;
+        
+        // Update HTML form placeholders
+        document.querySelectorAll('[data-placeholder-' + lang + ']').forEach(el => {
+            el.placeholder = el.getAttribute('data-placeholder-' + lang);
+        });
+
+        // Set active class on buttons
+        langBtns.forEach(btn => {
+            if (btn.getAttribute('data-lang') === lang) {
+                btn.classList.add('active');
+            } else {
+                btn.classList.remove('active');
+            }
+        });
+
+        localStorage.setItem('lang', lang);
+    }
+
+    // Set initial language from storage or default to Spanish ('es')
+    const savedLang = localStorage.getItem('lang') || 'es';
+    updateLanguage(savedLang);
+
+    langBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const lang = btn.getAttribute('data-lang');
+            updateLanguage(lang);
+        });
+    });
+
     // Mobile Menu
     const hamburger = document.querySelector('.hamburger');
     const mobileMenu = document.querySelector('.mobile-menu');
@@ -63,7 +109,6 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
-                // Optional: Stop observing once revealed
                 revealObserver.unobserve(entry.target);
             }
         });
@@ -73,6 +118,38 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // Project Category Filtering Logic
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const categoryGroups = document.querySelectorAll('.project-category-group');
+
+    if (filterButtons.length > 0 && categoryGroups.length > 0) {
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+
+                const filterValue = button.getAttribute('data-filter');
+
+                categoryGroups.forEach(group => {
+                    const groupCategory = group.getAttribute('data-category');
+                    
+                    if (filterValue === 'all' || groupCategory === filterValue) {
+                        group.classList.remove('hide');
+                        group.classList.add('active');
+                        // Ensure child cards are visible/active inside the section
+                        group.querySelectorAll('.project-card').forEach(card => {
+                            card.classList.add('active');
+                        });
+                    } else {
+                        group.classList.add('hide');
+                    }
+                });
+            });
+        });
+    }
 
     // Smooth Scroll for Anchor Links (Enhanced)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -101,16 +178,58 @@ document.addEventListener('DOMContentLoaded', () => {
         contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             const btn = contactForm.querySelector('button');
-            const originalText = btn.textContent;
+            const originalTextEs = btn.querySelector('.lang-es')?.textContent || 'Enviar Mensaje';
+            const originalTextEn = btn.querySelector('.lang-en')?.textContent || 'Send Message';
+            const currentLang = document.documentElement.getAttribute('lang') || 'es';
             
-            // Check if the user hasn't replaced the placeholder ID yet
-            if (contactForm.action.includes('TU_ID_DE_FORMSPREE')) {
-                alert('Para que el formulario funcione, necesitas registrarte en Formspree (https://formspree.io) y reemplazar "TU_ID_DE_FORMSPREE" en el archivo index.html con tu ID de formulario.');
+            // Client-side sanitization and validation (XSS and input constraints)
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const messageInput = document.getElementById('message');
+
+            const nameValue = nameInput.value.trim();
+            const emailValue = emailInput.value.trim();
+            const messageValue = messageInput.value.trim();
+
+            const latinLettersRegex = /^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ ]{2,50}$/;
+            const emailComRegex = /^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[cC][oO][mM]$/;
+            const xssRegex = /<[^>]*>|javascript:|on\w+\s*=/i;
+
+            if (xssRegex.test(nameValue) || xssRegex.test(emailValue) || xssRegex.test(messageValue)) {
+                const xssAlert = currentLang === 'es'
+                    ? 'Por razones de seguridad, no se permiten caracteres HTML o scripts.'
+                    : 'For security reasons, HTML tags or scripts are not allowed.';
+                alert(xssAlert);
                 return;
             }
 
-            btn.textContent = 'Enviando...';
+            if (!latinLettersRegex.test(nameValue)) {
+                const nameAlert = currentLang === 'es'
+                    ? 'El nombre solo debe contener letras latinas y espacios (máximo 50 caracteres).'
+                    : 'The name must only contain Latin letters and spaces (maximum 50 characters).';
+                alert(nameAlert);
+                return;
+            }
+
+            if (!emailComRegex.test(emailValue)) {
+                const emailAlert = currentLang === 'es'
+                    ? 'Por favor, introduce un correo electrónico válido que termine en .com.'
+                    : 'Please enter a valid email address ending in .com.';
+                alert(emailAlert);
+                return;
+            }
+
+            if (messageValue.length > 500) {
+                const messageAlert = currentLang === 'es'
+                    ? 'El mensaje no puede exceder los 500 caracteres.'
+                    : 'The message cannot exceed 500 characters.';
+                alert(messageAlert);
+                return;
+            }
+
             btn.disabled = true;
+            btn.querySelector('.lang-es').textContent = 'Enviando...';
+            btn.querySelector('.lang-en').textContent = 'Sending...';
 
             try {
                 const response = await fetch(contactForm.action, {
@@ -122,40 +241,47 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
 
                 if (response.ok) {
-                    btn.textContent = '¡Mensaje Enviado!';
+                    btn.querySelector('.lang-es').textContent = '¡Mensaje Enviado!';
+                    btn.querySelector('.lang-en').textContent = 'Message Sent!';
                     btn.style.backgroundColor = 'var(--accent-color)';
                     contactForm.reset();
 
                     setTimeout(() => {
-                        btn.textContent = originalText;
+                        btn.querySelector('.lang-es').textContent = originalTextEs;
+                        btn.querySelector('.lang-en').textContent = originalTextEn;
                         btn.disabled = false;
                         btn.style.backgroundColor = '';
                     }, 3000);
                 } else {
                     const data = await response.json();
-                    if (data.errors) {
-                         throw new Error(data.errors.map(error => error.message).join(", "));
-                    } else {
-                        throw new Error('Hubo un problema al enviar el formulario');
-                    }
+                    const errMsg = data.message || (currentLang === 'es' ? 'Hubo un problema al enviar el formulario' : 'There was a problem sending the form');
+                    throw new Error(errMsg);
                 }
             } catch (error) {
                 console.error('Error:', error);
                 
-                // If fetch failed deeply (like CORS error on local file), try standard submission
-                // This is common when testing from file://
+                // Fallback to standard submission if running locally on file:// protocol
                 if (error.name === 'TypeError' && window.location.protocol === 'file:') {
-                     alert('Parece que estás probando desde un archivo local. El formulario se enviará de la forma tradicional.');
-                     contactForm.submit(); // Fallback to standard submit
+                     const alertFallback = currentLang === 'es'
+                         ? 'Parece que estás probando desde un archivo local. El formulario se enviará de la forma tradicional.'
+                         : 'It seems you are testing from a local file. The form will be sent in the traditional way.';
+                     alert(alertFallback);
+                     contactForm.submit();
                      return;
                 }
 
-                btn.textContent = 'Error';
+                btn.querySelector('.lang-es').textContent = 'Error';
+                btn.querySelector('.lang-en').textContent = 'Error';
                 btn.style.backgroundColor = '#e74c3c';
-                alert('Hubo un error al enviar el mensaje. Detalles: ' + error.message);
+                
+                const errorAlert = currentLang === 'es'
+                    ? 'Hubo un error al enviar el mensaje. Detalles: '
+                    : 'There was an error sending the message. Details: ';
+                alert(errorAlert + error.message);
 
                 setTimeout(() => {
-                    btn.textContent = originalText;
+                    btn.querySelector('.lang-es').textContent = originalTextEs;
+                    btn.querySelector('.lang-en').textContent = originalTextEn;
                     btn.disabled = false;
                     btn.style.backgroundColor = '';
                 }, 3000);
