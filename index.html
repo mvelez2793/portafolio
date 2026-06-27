@@ -291,7 +291,76 @@
                             <div class="category-divider"></div>
                         </div>
                         <div class="projects-grid">
-                            <!-- Tarjeta 1 -->
+
+                            <!-- Tarjeta NUEVO: Auditoría de Resiliencia y Seguridad (Proyecto Más Reciente) -->
+                            <div class="project-card reveal" style="position: relative;">
+                                <div style="position: absolute; top: 12px; right: 12px; background: linear-gradient(135deg, #e74c3c, #c0392b); color: white; font-size: 0.7rem; font-weight: 700; padding: 3px 10px; border-radius: 20px; z-index: 2; letter-spacing: 0.5px;">
+                                    <span class="lang-es">🆕 MÁS RECIENTE</span>
+                                    <span class="lang-en">🆕 LATEST</span>
+                                </div>
+                                <div class="project-img">
+                                    <div class="img-placeholder" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);">
+                                        <i class="fas fa-shield-halved" style="color: #e74c3c;"></i>
+                                    </div>
+                                </div>
+                                <div class="project-content">
+                                    <div class="project-header">
+                                        <div class="tech-badge-container" style="margin-bottom: 8px;">
+                                            <span class="tech-badge" style="background: rgba(231,76,60,0.15); color: #e74c3c; border-color: rgba(231,76,60,0.3);">🔒 Seguridad DAST · Performance · E2E Móvil</span>
+                                        </div>
+                                        <h3>
+                                            <span class="lang-es">Auditoría de Resiliencia y Seguridad: App Financiera Móvil</span>
+                                            <span class="lang-en">Resilience & Security Audit: Mobile Finance App</span>
+                                        </h3>
+                                    </div>
+                                    <p>
+                                        <span class="lang-es">Auditoría técnica de caja negra sobre el flujo crítico de autenticación. Combina automatización E2E móvil con Appium, stress testing con Postman Runner, análisis DAST con Charles Proxy y observabilidad en tiempo real con Grafana.</span>
+                                        <span class="lang-en">Black-box technical audit of the critical authentication flow. Combines mobile E2E automation with Appium, stress testing with Postman Runner, DAST analysis with Charles Proxy, and real-time observability with Grafana.</span>
+                                    </p>
+                                    <div style="margin-bottom: 20px;">
+                                        <strong style="font-size: 0.85rem; display: block; margin-bottom: 8px;">
+                                            <span class="lang-es">🎯 Puntos Clave:</span>
+                                            <span class="lang-en">🎯 Key Points:</span>
+                                        </strong>
+                                        <ul style="font-size: 0.85rem; padding-left: 18px; list-style-type: disc; color: var(--text-muted);">
+                                            <li style="margin-bottom: 6px;">
+                                                <span class="lang-es"><strong>E2E Móvil (Appium):</strong> Framework idempotente con UiAutomator2 — caché destruido entre pruebas, cero fugas de estado.</span>
+                                                <span class="lang-en"><strong>Mobile E2E (Appium):</strong> Idempotent framework with UiAutomator2 — cache cleared between tests, zero state leaks.</span>
+                                            </li>
+                                            <li style="margin-bottom: 6px;">
+                                                <span class="lang-es"><strong>Hallazgo Crítico 🔴:</strong> Saturación total del Connection Pool de PostgreSQL por ausencia de Rate Limiting en el API Gateway.</span>
+                                                <span class="lang-en"><strong>Critical Finding 🔴:</strong> Full PostgreSQL Connection Pool saturation due to missing Rate Limiting in the API Gateway.</span>
+                                            </li>
+                                            <li style="margin-bottom: 6px;">
+                                                <span class="lang-es"><strong>Seguridad DAST (MitM):</strong> Validación de políticas TLS y análisis de SSL Pinning con Charles Proxy.</span>
+                                                <span class="lang-en"><strong>DAST Security (MitM):</strong> TLS policy validation and SSL Pinning analysis with Charles Proxy.</span>
+                                            </li>
+                                            <li style="margin-bottom: 6px;">
+                                                <span class="lang-es"><strong>Observabilidad:</strong> Telemetría con Grafana para monitorear Connection Pools en tiempo real bajo carga concurrente.</span>
+                                                <span class="lang-en"><strong>Observability:</strong> Grafana telemetry to monitor Connection Pools in real-time under concurrent load.</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="project-cta">
+                                        <a href="https://github.com/mvelez2793/12_Utransfer-QA-Assessment" target="_blank" class="btn-link">
+                                            <span class="lang-es">👉 Ver Auditoría Completa en GitHub <i class="fab fa-github"></i></span>
+                                            <span class="lang-en">👉 See Full Audit on GitHub <i class="fab fa-github"></i></span>
+                                        </a>
+                                    </div>
+                                    <div style="margin-top: 16px; display: flex; flex-wrap: wrap; gap: 4px;">
+                                        <span class="tech-badge">Python 3</span>
+                                        <span class="tech-badge">Appium 2</span>
+                                        <span class="tech-badge">UiAutomator2</span>
+                                        <span class="tech-badge">Postman Runner</span>
+                                        <span class="tech-badge">Charles Proxy</span>
+                                        <span class="tech-badge">Grafana</span>
+                                        <span class="tech-badge">PostgreSQL</span>
+                                        <span class="tech-badge">Node.js</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Tarjeta: Auditoría 360° Urban Scooter -->
                             <div class="project-card reveal">
                                 <div class="project-img">
                                     <div class="img-placeholder auditoria-bg">
